@@ -92,15 +92,6 @@ const BottomTabNavigator = () => {
                   tintColor: focused ? '#e32f45' : '#748c94',
                 }}
               />
-              {/* <Text
-                style={{
-                  color: focused ? '#000000' : '#748c94',
-                  fontSize: 15,
-                  fontWeight: 'bold',
-                }}
-              >
-                Plant
-              </Text> */}
             </View>
           ),
         }}
@@ -131,15 +122,6 @@ const BottomTabNavigator = () => {
                   tintColor: focused ? '#e32f45' : '#748c94',
                 }}
               />
-              {/* <Text
-                style={{
-                  color: focused ? '#000000' : '#748c94',
-                  fontSize: 15,
-                  fontWeight: 'bold',
-                }}
-              >
-                Site Event
-              </Text> */}
             </View>
           ),
         }}
@@ -165,15 +147,6 @@ const BottomTabNavigator = () => {
                   tintColor: focused ? '#e32f45' : '#748c94',
                 }}
               />
-              {/* <Text
-                style={{
-                  color: focused ? '#000000' : '#748c94',
-                  fontSize: 15,
-                  fontWeight: 'bold',
-                }}
-              >
-                Contact
-              </Text> */}
             </View>
           ),
         }}

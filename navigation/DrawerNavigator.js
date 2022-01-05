@@ -8,27 +8,18 @@ import CustomDrawer from '../components/CustomDrawer';
 const Drawer = createDrawerNavigator();
 
 const DrawerNavigator = ({ nav }) => {
-  const currentRouteName = nav()?.getCurrentRoute()?.name;
+  // const currentRouteName = nav()?.getCurrentRoute()?.name;
   return (
     <Drawer.Navigator
-      screenOptions={({ navigation }) => ({
-        // headerStyle: {
-        //   backgroundColor: '#551E18',
-        //   height: 50,
-        // },
-        // title = nav.name,
-      })}
+      // screenOptions={{ headerShown: false }}
       drawerContent={(props) => <CustomDrawer {...props} nav={nav} />}
     >
       <Drawer.Screen
         name={screens.HomeTab}
         component={BottomTabNavigator}
         options={{
-          headerTitle: { currentRouteName },
+          title: 'Home',
           headerTitleAlign: 'center',
-          // headerTitle: (focused) => (
-          //   <Text>{focused ? currentRouteName : ''}</Text>
-          // ),
         }}
       />
     </Drawer.Navigator>

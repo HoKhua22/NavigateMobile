@@ -11,7 +11,7 @@ const PlantStackNavigator = () => {
         headerShown: false,
       }}
     >
-      <Stack.Screen name={screens.PlantStack} component={PlantScreen} />
+      <Stack.Screen name={screens.Plant} component={PlantScreen} />
     </Stack.Navigator>
   );
 };

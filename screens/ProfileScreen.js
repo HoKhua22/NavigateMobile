@@ -1,33 +1,44 @@
 import React from 'react';
-import { View, Button, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
 const ProfileScreen = ({ navigation, route }) => {
   const { name } = route.params;
   const { email } = route.params;
   const { employed } = route.params;
-  console.log(route);
-  console.log(route.params);
-
   return (
-    <View style={styles.center}>
-      <Text>{JSON.stringify(name)}</Text>
-      <Text>{JSON.stringify(email)}</Text>
-      <Text>{JSON.stringify(employed)}</Text>
-      <Text>This is the profile screen</Text>
-      <Button
-        title="Go to Home Screen"
-        onPress={() => navigation.navigate('Home')}
-      />
-    </View>
+    <>
+      <View style={[styles.card, styles.cardContent]}>
+        <Text>Name</Text>
+        <Text style={{ marginLeft: 15 }}>{name}</Text>
+      </View>
+      <View style={[styles.card, styles.cardContent]}>
+        <Text>Email</Text>
+        <Text style={{ marginLeft: 15 }}>{email}</Text>
+      </View>
+      <View style={[styles.card, styles.cardContent]}>
+        <Text>Employed</Text>
+        <Text style={{ marginLeft: 15 }}>{employed}</Text>
+      </View>
+    </>
   );
 };
 
 const styles = StyleSheet.create({
-  center: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center',
+  card: {
+    backgroundColor: '#FFFFFF',
+    shadowColor: '#FFFFFF',
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 1,
+    shadowRadius: 8,
+    elevation: 8,
+    marginVertical: 10,
+    marginHorizontal: 25,
+    borderRadius: 4,
+    padding: 10,
+  },
+  cardContent: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
   },
 });
 

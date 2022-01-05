@@ -1,22 +1,29 @@
 import React from 'react';
-import { View, Button, Text, StyleSheet } from 'react-native';
-
+import { View, Button, Text, StyleSheet, SafeAreaView } from 'react-native';
+// import Header from '../components/Header';
 const HomeScreen = ({ navigation }) => {
   return (
-    <View style={styles.center}>
-      <Text>This is the home screen</Text>
-      <Button
-        title="Go to Profile Screen"
-        onPress={() => {
-          /* 1. Navigate to the Details route with params */
-          navigation.navigate('ProfileStack', {
-            name: 'Nguyen Pham',
-            email: 'nguyen.pham@acciona.com',
-            employed: 'Caobech Pty Ltd',
-          });
-        }}
-      />
-    </View>
+    <SafeAreaView>
+      {/* <Header title="Home" /> */}
+      <View>
+        <Button
+          title="Go to Profile Screen"
+          onPress={() => {
+            navigation.navigate('HomeTab', {
+              screen: 'ProfileStack',
+              params: {
+                screen: 'Profile',
+                params: {
+                  name: 'Nguyen Pham',
+                  email: 'test@gmail.com',
+                  employed: 'Caobech Pty Ltd',
+                },
+              },
+            });
+          }}
+        />
+      </View>
+    </SafeAreaView>
   );
 };
 

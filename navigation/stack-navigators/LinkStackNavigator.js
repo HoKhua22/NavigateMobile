@@ -11,7 +11,7 @@ const LinkStackNavigator = () => {
         headerShown: false,
       }}
     >
-      <Stack.Screen name={screens.LinkStack} component={LinkScreen} />
+      <Stack.Screen name={screens.Link} component={LinkScreen} />
     </Stack.Navigator>
   );
 };
